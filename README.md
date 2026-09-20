@@ -19,7 +19,7 @@ untrusted input from the first line.
 |---|---|
 | Shared-secret authentication | Rejects unauthenticated callers before any field is parsed |
 | Constant-time token comparison | Prevents timing-based token recovery |
-| Source host allowlist | Blocks SSRF — only approved hosts can be fetched |
+| Source host allowlist | Blocks SSRF: only approved hosts can be fetched |
 | Recipient domain allowlist | Prevents the endpoint being abused as a spam relay |
 | Content-type verification | Rejects sources that do not return a real PDF |
 | Per-file and total size caps | Bounds resource consumption |
@@ -111,7 +111,7 @@ plan and applies on top of these limits.
 - The monitoring callback is fire-and-forget. Its failures are logged and
   swallowed, so a monitoring outage never turns a delivered email into a
   reported error.
-- A webhook URL is itself a credential — unauthenticated by default, and
+- A webhook URL is itself a credential: unauthenticated by default, and
   anyone holding it can inject events. It belongs in Script Properties, not
   in source control.
 
@@ -121,4 +121,4 @@ Google Apps Script (JavaScript), `UrlFetchApp`, `MailApp`, `PropertiesService`.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT: see [LICENSE](LICENSE).
